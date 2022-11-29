@@ -7,16 +7,22 @@ let addBtn = document.querySelector('#add');
 
 
 addBtn.addEventListener('click', addTodo);
-
+input.addEventListener('click', () => {
+    input.value = "";
+    input.placeholder = "";
+    });
 
 
 
 function addTodo(){
     let newTodo = document.createElement('p');
     newTodo.innerHTML = input.value;
+    newTodo.classList.remove("todo");
+
 
     let editBtn = document.createElement("button");
     editBtn.innerHTML = "Изменить";
+    editBtn.classList.add("todo");
 
     editBtn.addEventListener('click', function() {
         newTodo.innerHTML = '<input>';
@@ -28,6 +34,7 @@ function addTodo(){
 
     let delBtn = document.createElement("button");
     delBtn.innerHTML = "Удалить";
+    delBtn.classList.add("todo");
 
     delBtn.addEventListener('click', function() {
 		newTodo.remove();
