@@ -1,3 +1,7 @@
 .todo{
     display: inline-block;
 }
+
+.todo-block{
+    border: 2px solid black;
+}

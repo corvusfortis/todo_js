@@ -15,9 +15,12 @@ input.addEventListener('click', () => {
 
 
 function addTodo(){
+    let todoBlock = document.createElement('div');
+    todoBlock.classList.add('todo-block')
+
     let newTodo = document.createElement('p');
     newTodo.innerHTML = input.value;
-    newTodo.classList.remove("todo");
+    newTodo.classList.add("todo");
 
 
     let editBtn = document.createElement("button");
@@ -42,9 +45,9 @@ function addTodo(){
         delBtn.remove();
 	});
 
-    document.body.appendChild(newTodo);
-    document.body.appendChild(editBtn);
-    document.body.appendChild(delBtn);
+    document.body.appendChild(todoBlock).appendChild(newTodo);
+    document.body.appendChild(todoBlock).appendChild(editBtn);
+    document.body.appendChild(todoBlock).appendChild(delBtn);
 
     function editText(){
         newTodo.innerHTML = this.value;
