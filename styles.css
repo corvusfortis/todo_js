@@ -1,7 +1,98 @@
-.todo{
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: rgb(20, 34, 186);
+    align-items: center;
+}
+
+
+
+
+
+
+h1{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.todo-input{
     display: inline-block;
+    justify-content: center;
+    height: 36px;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+}
+
+.add{
+    display: inline-block;
+    margin: 2px;
+    border: none;
+    border-radius: 15px;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    color: white;
+    background-color: darkblue;
+}
+
+.todo{
+    margin: 5px;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-btn{
+    color: white;
+    background-color: darkblue;
+    border-radius: 15px;
+    width: 24px;
+    height: 24px;
 }
 
 .todo-block{
-    border: 2px solid black;
+    margin-top: 10px;
+    font-size: 24px;
+    width: 100%;
+}
+
+.container{
+    margin-left: 140px;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.main-container{
+    background-color: lightblue;
+    min-height: 600px;
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    max-width: auto 128px;
+    border-radius: 10px;
+    padding-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

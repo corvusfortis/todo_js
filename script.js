@@ -1,6 +1,6 @@
 let input = document.querySelector("#todo-input");
 let addBtn = document.querySelector('#add');
-
+let container = document.querySelector("#container");
 
 
 
@@ -24,8 +24,8 @@ function addTodo(){
 
 
     let editBtn = document.createElement("button");
-    editBtn.innerHTML = "Изменить";
-    editBtn.classList.add("todo");
+    editBtn.innerHTML = `<i class="fa-solid fa-pen"></i>`;
+    editBtn.classList.add("todo", "todo-btn");
 
     editBtn.addEventListener('click', function() {
         newTodo.innerHTML = '<input>';
@@ -36,8 +36,8 @@ function addTodo(){
     })
 
     let delBtn = document.createElement("button");
-    delBtn.innerHTML = "Удалить";
-    delBtn.classList.add("todo");
+    delBtn.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
+    delBtn.classList.add("todo", "todo-btn");
 
     delBtn.addEventListener('click', function() {
 		newTodo.remove();
@@ -45,16 +45,11 @@ function addTodo(){
         delBtn.remove();
 	});
 
-    document.body.appendChild(todoBlock).appendChild(newTodo);
-    document.body.appendChild(todoBlock).appendChild(editBtn);
-    document.body.appendChild(todoBlock).appendChild(delBtn);
+    container.appendChild(todoBlock).appendChild(newTodo);
+    container.appendChild(todoBlock).appendChild(editBtn);
+    container.appendChild(todoBlock).appendChild(delBtn);
 
     function editText(){
         newTodo.innerHTML = this.value;
     }
 }
-
-
-
-
-console.log("test")
