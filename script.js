@@ -15,6 +15,10 @@ input.addEventListener('click', () => {
 
 
 function addTodo(){
+    if(input.value !== "" && input.value !== input.placeholder){
+
+    
+
     let todoBlock = document.createElement('div');
     todoBlock.classList.add('todo-block')
 
@@ -31,7 +35,9 @@ function addTodo(){
         newTodo.innerHTML = '<input>';
         let editInput = newTodo.querySelector('input');
         editInput.addEventListener('blur', function() {
+            if(editInput.value !== ""){
             newTodo.innerHTML = editInput.value;
+            }
         })
     })
 
@@ -51,5 +57,6 @@ function addTodo(){
 
     function editText(){
         newTodo.innerHTML = this.value;
+    }
     }
 }
